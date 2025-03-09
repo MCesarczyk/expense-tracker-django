@@ -50,17 +50,17 @@ class ExpenseManager(models.Manager):
 
 
 class Expense(models.Model):
+    id = models.IntegerField(primary_key=True)
     account_number = models.CharField(max_length=255, default="PL61109010140000071219812874")
-    title = models.CharField(max_length=255)
     transaction_date = models.DateField()
     accounting_date = models.DateField()
     transaction_type = models.ForeignKey(
         TransactionType, related_name="expense", on_delete=models.CASCADE
     )
-    target = models.CharField(max_length=255)
     target_account = models.CharField(max_length=255)
+    target = models.CharField(max_length=255)
     description = models.TextField()
-    slug = models.SlugField(max_length=255, unique=True)
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
     category = models.ForeignKey(
         Category, related_name="expense", on_delete=models.CASCADE
     )
@@ -68,7 +68,6 @@ class Expense(models.Model):
         Subcategory, related_name="expense", on_delete=models.CASCADE
     )
     details = models.TextField()
-    amount = models.DecimalField(max_digits=10, decimal_places=2)
     created_by = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="expense_creator"
     )
@@ -82,7 +81,7 @@ class Expense(models.Model):
         ordering = ("-accounting_date",)
 
     def __str__(self):
-        return self.title
+        return self.description
 
     def get_absolute_url(self):
-        return reverse("store: expense_detail", args=[self.slug])
+        return reverse("store: expense_detail", args=[self.id])

@@ -26,11 +26,11 @@ class TransactionTypeAdmin(admin.ModelAdmin):
 @admin.register(Expense)
 class ExpenseAdmin(admin.ModelAdmin):
     list_display = [
-        "title",
+        "description",
         "transaction_date",
         "accounting_date",
         "transaction_type",
         "category",
     ]
     search_fields = ["title"]
-    prepopulated_fields = {"slug": ("title",)}
+    prepopulated_fields = {"id": ("description",)}
