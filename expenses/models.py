@@ -8,6 +8,15 @@ class TransactionType(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=True)
 
+    class Meta:
+        verbose_name_plural = "transaction types"
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse("store: transaction_type_list", args=[self.slug])
+
 
 class Category(models.Model):
     name = models.CharField(max_length=255)
