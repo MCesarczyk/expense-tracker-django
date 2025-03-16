@@ -1,0 +1,12 @@
+Numer rachunku/karty,Data transakcji,Data rozliczenia,Rodzaj transakcji,Na konto/Z konta,Odbiorca/Zleceniodawca,Opis,Obciążenia,Uznania,Saldo,Kategoria,Podkategoria,Szczegóły
+PL78 4242 4242 4242 4242 4242,2019-12-28,2019-12-30,karta,,,Karta:425125******3799 Lokalizacja: JMP S.A. BIEDRONKA 4680 WARSZAWA PL,-6.6,,-6.6,jedzenie,codzienne,bułki
+PL78 4242 4242 4242 4242 4242,2019-12-28,2019-12-30,karta,,,"Karta:425125******3799 Lokalizacja: Restauracja ""KURA"" Warszawa PL",-49,,-55.6,extras,,
+PL78 4242 4242 4242 4242 4242,2020-01-02,2020-01-02,uznanie,,,Milletransfer 77116022020000000343907195 CESARCZYK MICHAŁ UL FABRYCZNA,,500,1,transfer,,
+PL78 4242 4242 4242 4242 4242,2020-01-10,2020-01-10,kredyt,,,odsetki,-479.03,,-306.03,mieszkanie,,
+PL78 4242 4242 4242 4242 4242,2020-01-10,2020-01-10,kredyt,,,kapitał,-836.82,,-1142.85,mieszkanie,,
+PL78 4242 4242 4242 4242 4242,2020-01-14,2020-01-16,karta,,,Karta:425125******3799 Lokalizacja: CARREFOUR WROCLAW PL,-59.98,,4,jedzenie,,
+PL78 4242 4242 4242 4242 4242,2020-01-17,2020-01-17,karta,,,Karta:425125******3799 Lokalizacja: JMP S.A. BIEDRONKA 3702 WROCLAW,-175.14,,-171.14,jedzenie,,
+PL78 4242 4242 4242 4242 4242,2020-01-17,2020-01-19,karta,,,Karta:425125******3799 Lokalizacja: Peek & Cloppenburg Wroclaw PL,-129.99,,-301.13,jedzenie,,
+PL78 4242 4242 4242 4242 4242,2020-01-20,2020-01-22,karta,,,Karta:425125******3799 Lokalizacja: JMP S.A. BIEDRONKA 3702 WROCLAW,-139.14,,5,jedzenie,,
+PL78 4242 4242 4242 4242 4242,2020-01-20,2020-01-22,karta,,,Karta:425125******3799 Lokalizacja: ZABKA Z3534 K.1 WROCLAW,-19.68,,-14.68,jedzenie,,
+PL78 4242 4242 4242 4242 4242,2020-01-21,2020-01-21,spłata karty,,,,-842.46,,-857.14,,,
