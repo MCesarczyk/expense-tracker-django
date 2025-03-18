@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}
+Expense tracker
+{% endblock title %}
+
+{% block page_content %}
+<h1>Expense tracker</h1>
+<ul class="list-group row">
+    <li class="list-group-item col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><a href="expenses/">Expenses</a></h5>
+            </div>
+        </div>
+    </li>
+    <li class="list-group-item col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><a href="expenses/categories/">Categories</a></h5>
+            </div>
+        </div>
+    </li>
+    <li class="list-group-item col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><a href="expenses/subcategories/">Subcategories</a></h5>
+            </div>
+        </div>
+    </li>
+    <li class="list-group-item col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><a href="expenses/transaction-types/">Transaction types</a></h5>
+            </div>
+        </div>
+    </li>
+</ul>
+{% endblock page_content %}
