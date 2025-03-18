@@ -5,6 +5,7 @@ app_name = 'expenses'
 
 urlpatterns = [
     path('', views.expense_all, name='expense_all'),
+    path('import/', views.import_expenses, name='import_expenses'),
     path('details/<slug:slug>/', views.expense_detail, name='expense_detail'),
     path('categories/', views.category_all, name='categories'),
     path('subcategories/', views.subcategory_all, name='subcategories'),

@@ -1,5 +1,20 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from expenses import models
+from .forms import CSVImportForm
+from .scripts import import_data
+
+
+def import_expenses(request):
+    if request.method == "POST":
+        form = CSVImportForm(request.POST, request.FILES)
+        if form.is_valid():
+            csv_file = request.FILES["csv_file"]
+            import_data.run(csv_file)
+            return redirect("success_page")
+    else:
+        form = CSVImportForm()
+
+    return render(request, "expenses/import_expenses.html", {"form": form})
 
 
 def expense_all(request):

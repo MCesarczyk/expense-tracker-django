@@ -24,4 +24,5 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('admin/', admin.site.urls),
     path('expenses/', include('expenses.urls')),
+    path('success/', views.success_page, name='success_page'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
