@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+Import expenses
+{% endblock title %}
+
+{% block page_content %}
+<h1>Import expenses</h1>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-primary">Import CSV</button>
+</form>
+{% endblock page_content %}
