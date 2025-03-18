@@ -8,6 +8,11 @@ def expense_all(request):
     return render(request, "expenses/expenses_list.html", context)
 
 
+def expense_detail(request, slug):
+    expense = get_object_or_404(models.Expense, id=slug)
+    return render(request, "expenses/expense_detail.html", {"expense": expense})
+
+
 def category_all(request):
     categories = models.Category.objects.all()
     context = {"categories": categories}

@@ -11,7 +11,7 @@ Expenses list
     <li class="list-group-item">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">{{ expense.description }}</h5>
+                <h5 class="card-title"><a href="/expenses/details/{{ expense.id}}">{{ expense.description }}</a></h5>
                 <p class="card-text">{{ expense.transaction_date }}</p>
                 <p class="card-text">{{ expense.amount }}</p>
             </div>
