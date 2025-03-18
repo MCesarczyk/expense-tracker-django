@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+Expenses list
+{% endblock title %}
+
+{% block page_content %}
+<h1>Expenses list</h1>
+<ul class="list-group">
+    {% for expense in expenses %}
+    <li class="list-group-item">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ expense.description }}</h5>
+                <p class="card-text">{{ expense.transaction_date }}</p>
+                <p class="card-text">{{ expense.amount }}</p>
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock page_content %}
